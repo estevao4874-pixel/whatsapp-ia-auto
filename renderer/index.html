@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WhatsApp IA</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+  <header class="top">
+    <strong class="brand">WhatsApp IA</strong>
+    <span id="wa-pill" class="pill">Desconectado</span>
+    <div class="mode" role="group" aria-label="Modo de resposta">
+      <button id="mode-manual" data-mode="manual">Você revisa</button>
+      <button id="mode-auto" data-mode="auto">Autônomo</button>
+    </div>
+  </header>
+  <nav class="rail" id="rail">
+    <button data-view="chats" class="on">Conversas<span id="badge" class="badge" hidden></span></button>
+    <button data-view="prompts">Prompts</button>
+    <button data-view="log">Registro</button>
+    <button data-view="test">Testar a IA</button>
+    <button data-view="settings">Configurações</button>
+  </nav>
+  <main id="main"></main>
+</div>
+<div id="toasts" aria-live="polite"></div>
+<script src="app.js"></script>
+</body>
+</html>
